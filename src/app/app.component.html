@@ -1,0 +1,11 @@
+<hello name="{{ name }}"></hello>
+
+<button (click)="getPosts()"> Posts </button>
+
+<div *ngFor="let post of posts | async">
+  {{post | json}}
+</div>
+
+<button (click)="createPost()"> Create Posts </button>
+
+{{ newPost | async | json }}
